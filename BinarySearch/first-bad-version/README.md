@@ -30,43 +30,64 @@ You are given an API bool isBadVersion(version) which returns whether version is
 > (hint this is the largest number you can store in Java!)
 init
 1  2  3  4  5
+
 F  F  F  T  T
 
 L = 1
 R = 5
 
 pivot = 1 + (5 - 1) / 2
+
 pivot = 1 + 4 / 2
+
 pivot = 1 + 2
+
 pivot = 3
 
 1  2  3  4  5
+
       ^
+
       F
 
 // not the first bad version
+
 L = pivot + 1
+
 L = 3 + 1
+
 L = 4
 
+
 pivot = L + (R - L) / 2
+
 pivot = 4 + (5 - 4) / 2
+
 pivot = 4 + (1) / 2
+
 pivot = 4
 
 1  2  3  4  5
+
          ^
+
          T
 
+
 // we found a bad number!
+
 // BASE CASE! BASE CASE!
+
 // check if the number before the bad number is good
 
 check = 4 - 1
+
 check = 3
 
 1  2  3  4  5
+
       ^
+      
       T
 
 // return pivot!
