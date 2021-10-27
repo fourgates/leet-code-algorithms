@@ -40,6 +40,8 @@ F  F  F  T  T
 L = 1
 R = 5
 
+pivot = L + (R - L) / 2
+
 pivot = 1 + (5 - 1) / 2
 
 pivot = 1 + 4 / 2
