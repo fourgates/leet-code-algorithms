@@ -28,6 +28,10 @@ You are given an API bool isBadVersion(version) which returns whether version is
 > 1 <= bad <= n <= 231 - 1
 >
 > (hint this is the largest number you can store in Java!)
+
+## Graphical
+
+### First Loop
 init
 1  2  3  4  5
 
@@ -58,7 +62,7 @@ L = 3 + 1
 
 L = 4
 
-
+### Second Loop
 pivot = L + (R - L) / 2
 
 pivot = 4 + (5 - 4) / 2
@@ -87,7 +91,7 @@ check = 3
 1  2  3  4  5
 
       ^
-      
+
       T
 
 // return pivot!
