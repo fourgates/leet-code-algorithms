@@ -4,6 +4,8 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
 
 You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
+https://leetcode.com/problems/first-bad-version/
+
 ## Example 1:
 > Input: n = 5, bad = 4
 >
