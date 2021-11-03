@@ -1,5 +1,7 @@
 package TwoPointers.MoveZeroes;
 
+import Utils.PrintUtils;
+
 /**
  * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
  * 
@@ -10,20 +12,9 @@ class TwoPointersMoveZerosMain{
         TwoPointersMoveZeros t = new TwoPointersMoveZeros();
         int[] nums = {0,1,0,3,12};
         t.moveZeroes(nums);
-        printArray(nums);
+        PrintUtils.printArray(nums);
     }
-    private static void printArray(int[] nums){
-        System.out.println("Out: ");
-        System.out.print("[");
-        for(int i=0;i<nums.length;i++){
-            System.out.print(nums[i]);
-            if(i < nums.length - 1){
-                System.out.print(","); 
-            }
-        }
-        System.out.print("]");
-        System.out.println();
-    }
+
     
 }
 public class TwoPointersMoveZeros {
