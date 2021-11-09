@@ -1,4 +1,4 @@
-package BFS;
+package DFS.FloodFill;
 
 /**
  * [733. Flood Fill - Easy ](https://leetcode.com/problems/flood-fill/
@@ -14,7 +14,7 @@ Return the modified image after performing the flood fill.
  */
 class BFSFloodFillMain{
     public static void main(String[] args){
-        BFSFloodFill f = new BFSFloodFill();
+        DFSFloodFill f = new DFSFloodFill();
         int[][] input = {{1,1,1},{1,1,0},{1,0,1}};
         int[][] expected = {{2,2,2},{2,2,0},{2,0,1}};
         int[][] actual = f.floodFill(input, 1, 1, 2);
@@ -28,7 +28,7 @@ class BFSFloodFillMain{
         System.out.println("It worked!");
     }
 }
-public class BFSFloodFill {
+public class DFSFloodFill {
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
         int color = image[sr][sc];
         if(color != newColor){
