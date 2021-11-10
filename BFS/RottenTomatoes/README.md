@@ -1,5 +1,7 @@
 [994. Rotting Oranges - Medium](https://leetcode.com/problems/rotting-oranges/)
 
+https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/
+
 You are given an m x n grid where each cell can have one of three values:
 
 0 representing an empty cell,
