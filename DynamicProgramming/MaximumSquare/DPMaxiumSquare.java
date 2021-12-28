@@ -25,24 +25,32 @@ public class DPMaxiumSquare {
 //
 // matrix[i][j] = 1 return 1
 class Solution {
-    private char[][] matrix;
-    private int n, m;
+    private int maxSql = 0;
     public int maximalSquare(char[][] matrix) {
-        if(matrix.length == 0 || matrix[0].length == 0){
-            return 0;
-        }
-        this.matrix = matrix;
-        this.n = this.matrix.length;
-        this.m = this.matrix[0].length;
-        return dp(0,0);
+        return bottomDown(matrix);
+        
     }
-    private int dp(int x, int y){
-        if(x == n || y == n){
+    private int bottomDown(char[][] matrix){
+        int rows = matrix.length, columns = matrix[0].length;
+        if(rows == 0){
             return 0;
         }
-        if(matrix[x][y] >= 1){
-            matrix[x][y] = (char)dp(x,y);
-        }
-        return matrix[x][y];
+        int[][] memo = new int[rows+1][columns+1];
+        
+        for(int i=1;i<=rows;i++){
+            for(int j=1;j<=columns;j++){
+                if(matrix[i-1][j-1] == '0'){
+                    continue;
+                }
+                // we want to take the min here bc if any of these values are not 1 then the 
+                // area should be 1
+                memo[i][j] = Math.min(
+                    memo[i-1][j],
+                    Math.min(memo[i-1][j-1], memo[i][j-1])
+                ) + 1;
+                maxSql = Math.max(maxSql, memo[i][j]);                
+            }
+        }        
+        return maxSql * maxSql;
     }
 }
