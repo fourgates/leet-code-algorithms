@@ -1,4 +1,4 @@
-package Graphs.DisjointSets;
+package Graphs.DisjointSets.QuickFind;
 
 class App {
     public static void main(String[] args) throws Exception {

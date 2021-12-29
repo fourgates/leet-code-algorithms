@@ -1,4 +1,4 @@
-package Graphs.DisjointSets;
+package Graphs.DisjointSets.RankOptimized;
 
 public class QuickUnionRankOptimized {
     private int[] root;
