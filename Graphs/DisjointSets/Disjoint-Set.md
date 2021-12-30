@@ -18,3 +18,9 @@
 
 - Find Function - this finds the root of a graph
 - Union Function - this joins two node into the same graph. This may require one of the root nodes to be replaced 
+
+# Summary
+
+- The main idea is to have all connected vertices hae the same parent or root node. to check if two vertices are connected just check if they have the same root node
+
+- 
