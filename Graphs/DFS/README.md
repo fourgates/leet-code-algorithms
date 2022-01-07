@@ -1,5 +1,20 @@
 # Overview of Depth-First Search Algorithm
 
+## lessons learned
+
+- if you are given a problem that does not explicity give you a graph you may need to construct one. a `List` of `List` will sometimes work. 
+
+`List<List<String>> graph = new ArraysList<>()`
+
+- to keep track of the nodes you visited you either need a data structure, you can remove edges from the graph data structure you created, or create a map of objects
+to be able to compare references if you are dealing with objects!
+
+- sometimes using DFS can result in your result set being backwards. make sure you trace your code and get the expected output!
+
+- sometimes disjoint sets and dfs can be interchanged. this is especially so when seeing if a path exists between two components
+
+## Gettng Started
+
 Disjoin sets check for connectivity (parity) between two vertices. But how do you final all its vertices, and how can you find all paths between two vertices?
 
 DF is ideal in solving these types of problems. It can explore all pathers from the start vertex to all others. 
