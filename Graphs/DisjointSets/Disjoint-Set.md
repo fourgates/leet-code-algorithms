@@ -1,4 +1,12 @@
-# Disjoint Set
+# Disjoint Set aka Union Find
+
+- The Union-Find data structure is often applied to solve the graph partition problem, where we partition a graph into a set of inter-connected subgraph.
+
+The name of Union-Find data structure is originated from the fact that it mainly consists of two operations: Union() and Find() defined as follows:
+
+Find(x): get the identity of the group that the element x belongs to.
+
+Union(x, y): merge the two groups that the two elements belong to respectively.
 
 - A data structure or algorithm that allows you to determine if two vertices are connected. A commo use case for this type of graph is a computer network. This can be used to address connectivity between two or more components. You can also use a social network. e.g. you can determine if two people share a common ancestor
 
