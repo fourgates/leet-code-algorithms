@@ -1,4 +1,4 @@
-package Graphs.RightPointers;
+package Graphs.DFS.RightPointers;
 
 class Node {
     public int val;
