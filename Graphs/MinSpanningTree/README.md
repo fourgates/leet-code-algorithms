@@ -59,3 +59,15 @@
 
 ## Space Complexity
 - `O(V)`
+
+## When to use each algorithm?
+
+### KrusKal
+- Use Kruskal in sparse graphs, more edges than vertices
+- Easier to implement
+- Use Disjoint Sets + Priority Queue
+
+### Prim
+- Use Prim in dense graphs, more edges than vertices
+- Harder to implement
+- Use Priority Queue
