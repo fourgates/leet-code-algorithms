@@ -5,21 +5,80 @@ import java.util.PriorityQueue;
 public class MinSpanningTreeeMinCostToConnectAllPoints {
     
 }
-// We can use Kruscals Algorithm
-// 
-// - sort all edges by weight
-// - add edge if it does not create a cycle
-// - continue until you added n-1 edges
 class Solution {
+    int n;
     public int minCostConnectPoints(int[][] points) {
         // edge cases
         if(points == null || points.length == 0){
             return -1;
         }
+        this.n = points.length;
+        // return kruscal(points);
+        return prism(points);
+    }
+    private int prism(int[][] points){
+        int size = points.length;
+        PriorityQueue<int[]> queue = new PriorityQueue<int[]>((a,b)-> a[2] - b[2]);
+        boolean[] visited = new boolean[size];
+        int result = 0;
+        int count = size - 1;
         
+        // pick [0] as the first point
+        int[] coord1 = points[0];
+        
+        // find all the edges for node 0
+        for(int j=1;j<size;j++){
+            int[] coord2 = points[j];
+
+            int x1 = coord1[0];
+            int y1 = coord1[1];
+            int x2 = coord2[0];
+            int y2 = coord2[1];
+
+            // calc weight and add it to queue
+            int weight = Math.abs(x1 - x2) + Math.abs(y1-y2);
+            queue.offer(new int[]{0, j, weight});                
+        }
+        
+        // mark noe 0 as visited
+        visited[0] = true;
+        while(!queue.isEmpty() && count > 0){
+            int[] coord = queue.poll();
+            int x1 = coord[0];
+            int y1 = coord[1];
+            int weight = coord[2];
+            
+            // ignore edge if we have visited it already
+            if(visited[y1]){
+                continue;
+            }
+            
+            // add it to the MST and mark it visited
+            result += weight;
+            visited[y1] = true;
+            
+            // time to add the edges from the newest verticie (y1 -> i)
+            for(int i = 0;i<size;i++){
+                if(visited[i]){
+                    continue;
+                }
+                // y1 is the new node
+                // so we need to find the weight of the edges between that and the
+                // edges we are iterating over (node i)
+                int weight2 = Math.abs(points[y1][0] - points[i][0]) 
+                    + Math.abs(points[y1][1]-points[i][1]);
+                queue.offer(new int[]{y1, i, weight2});                
+            }
+            count--;
+        }
+        return result;
+    }
+    private int kruscal(int[][] points){
+        // - sort all edges by weight
+        // - add edge if it does not create a cycle
+        // - continue until you added n-1 edges        
         // init
         int edges = 0;
-        int n = points.length;
         int totalWeight = 0;
         UnionFind uf = new UnionFind(n);
         
@@ -60,23 +119,22 @@ class Solution {
             edges++;
         }
         return totalWeight;
-    }
-    public class UnionFind{
-        // data
+    }            
+}
+class UnionFind{
         private int[] root;
-        // Use a rank array to record the height of each vertex, i.e., the "rank" of each vertex.
         private int[] rank;
         
         public UnionFind(int n){
             this.root = new int[n];
-            this.rank = new int[n]; // each rank is init to 1 since it points to itself
+            this.rank = new int[n];
             
             for(int i=0;i<n;i++){
                 this.root[i] = i;
                 this.rank[i] = 1;
             }
         }
-        private void union(int x, int y){
+        public void union(int x, int y){
             int rootX = find(x);
             int rootY = find(y);
             
@@ -95,14 +153,13 @@ class Solution {
                 rank[rootY]++;
             }
         }
-        private int find(int x){
-            if(root[x] == x){ // root
+        public int find(int x){
+            if(root[x] == x){
                 return x;
             }
             return root[x] = find(root[x]);
         }
-        private boolean isConnected(int x, int y){
+        public boolean isConnected(int x, int y){
             return find(x) == find(y);
         }
     }
-}
