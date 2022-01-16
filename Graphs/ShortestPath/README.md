@@ -40,3 +40,26 @@
 ### Theorem 2
 - In a `graph with negative weight cycles` there is no shortest path!
 - There is no shortest path because each time you go through the cycle the weight of the path gets smaller!
+
+### Using Dynamic Programming
+- You can use **up to N-1** edges to find the shortest path from `A`->`B`
+- `N-1` means you can use 1,2,3,... etc up to `N-1` edges to find the shortest path
+- Make sure there is not a negative cycle, otherwise there is no shortest path!
+
+1. Create a `N` * `E` matrix where `N` is the total number of edges and `E` is the maxium number of edges you are allowed to use. `E` will either be `N-1` or some small value defined in the problem. This matrix stores ths shortest distance from your source node to each verticie using up to `N-1` verticies.
+2. Init each cell to positive infinity (or `Integer.MAX_VALUE`)
+3. Start with 0 edges. You will only be able to get to the src node with 0 edges, thus its distance is 0. 
+4. Next, look for the shortest distances using `AT MOST` 1 edge. (AT MOST 1 means you could use 0 edges or 1 edge)
+5. The distance to the source using 1 edge is still 0. 
+6. Look at the next vert and identify which edges are directed at it. 
+7. Lookup the distance from the neighbors from N-1 edges. If the current distance + the N-1 distance we < than the neighbor we can update out table to store current_distance + n-1_distance
+- which N-K edge do you choose to use? You may need to count how many edges you are allowed to use at this cell. Else you can choose to use the cheapest distance. 
+
+`DP[k][u] min(DP([k][u], DP[k-1][v] + W(u,v)`
+> k = at most number of edges
+> u = the target vertex. (we are assuming the question defined a src node)
+> W() = weight algorithm
+> DP[k][u] = shortest path to u with at most k edges
+> DP[k-1][v] + W(u,v) = (assume we have edge u->v) shortest path from the previous verticie + the weight of the current distance from u->v
+
+> Base Cae = N = N-1
