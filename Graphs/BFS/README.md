@@ -2,6 +2,10 @@
 
 BFS is very similiar to DFS. it gives you a way to transverse all the nodes in a graph and all paths between two nodes. 
 
+## Overview
+- Use BFS when you want to find the shortest path
+- BFS is very similiar to DFS but utilizes a queue and doesnt use recursion very often
+
 ## Why use BFS?
 
 BFS is best used to find the shortest path between two nodes where **all edges have equal and positive weights**
