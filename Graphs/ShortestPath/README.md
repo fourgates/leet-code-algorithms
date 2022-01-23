@@ -12,7 +12,7 @@
 - To use this algo you typically have a data structure which keeps track of the previous node in the path (`prev`)  and a data structure that keeps track of the optimal weight (`weights` or `dist`) for a given node
 
 1. Start with a src node. mark the node visited, if needed
-2. Explox all of its neighbors (connected nodes)
+2. Explore all of its neighbors (connected nodes)
 3. Update `prev` and `weights` to mark the neighbors previous node the current node and the weight the current node's edges weight + the current weight of the neighbor
 4. Add the neightbors and their weight to a queue to be explored
 5. Pick the next node with the smallest weight (can leverage a `PriortiyQueue`)
