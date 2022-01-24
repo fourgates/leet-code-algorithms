@@ -1,6 +1,7 @@
 package Graphs.ShortestPath.NetworkDelay;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ public class ShortestPathNetworkDelay {
 //  -update prev and rank
 // make node as visited
 // move on to the next smallest edge
-class Solution {
+class SolutionDijkstras {
     public int networkDelayTime(int[][] times, int n, int k) {
         // init
         Map<Integer, List<int[]>> graph = new HashMap<>();
@@ -82,5 +83,35 @@ class Solution {
             result = Math.max(result, dist.get(node));
         }
         return result;
+    }
+}
+class SolutionBellman {
+    public int networkDelayTime(int[][] times, int n, int k) {
+        
+        // init
+        int[] c = new int[n + 1];
+        
+        Arrays.fill(c, Integer.MAX_VALUE);
+        
+        c[k] = 0;
+        for(int i=1;i< n;i++){
+            for(int[] time : times){
+                int u = time[0];
+                int v = time[1];
+                int w = time[2];
+
+                if(c[u] != Integer.MAX_VALUE){
+                    c[v] = Math.min(c[v], c[u] + w);
+                }
+            }
+        }
+        int max = -1;
+        for(int i=1;i<n+1;i++){
+            if(c[i] == Integer.MAX_VALUE){
+                return -1;
+            }
+            max = Math.max(max, c[i]);            
+        }
+        return max;
     }
 }

@@ -165,7 +165,7 @@ A recurrence relation is an equation that relates diff states with each other.
 
 
 
-We `i` = 30 and we want to see how many ways to climb 30 stairs, we can break the problem down. Since you either take 1 or 2 steps, the 2nd to last stair will either be 29 or 28. Therefoe, the number of ways to climb 30 stairs is dp(28) + dp(29). Or more generialized
+When `i` = 30 and we want to see how many ways to climb 30 stairs, we can break the problem down. Since you either take 1 or 2 steps, the 2nd to last stair will either be 29 or 28. Therefoe, the number of ways to climb 30 stairs is dp(28) + dp(29). Or more generialized
 
 ```
 dp(i) = dp(n-1) + dp(n-2)

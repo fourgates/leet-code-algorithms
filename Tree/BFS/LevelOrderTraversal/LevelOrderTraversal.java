@@ -1,4 +1,4 @@
-package Tree.LevelOrderTraversal;
+package Tree.BFS.LevelOrderTraversal;
 
 import java.util.ArrayList;
 import java.util.Arrays;
