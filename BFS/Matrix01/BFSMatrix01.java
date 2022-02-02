@@ -3,6 +3,38 @@ package BFS.Matrix01;
 import java.util.LinkedList;
 import java.util.Queue;
 
+//
+// TODO
+//
+// - calc the distance between the nearest 0 from each cell
+// - the dist between two adjacent cells is 1
+// 
+// thoughts...
+//
+// seems like a bfs type of q
+//
+// why bfs?
+//
+// which would be O(n * m)
+// and O(n * m) space
+// we can essentially reuse the a neighbor to determine the closest 0
+// the size of the matrix can be very large
+//  may not want to use recursion or at least optimize at the end
+// pseduo
+//
+//  foreach row
+//      foreach col
+//          if row,col = 0 queue it up
+//          mark it as visited
+//
+//  while queue is not empty
+//      get the current node
+//      iterate over its neighbors
+//      do a bounds and visited check
+//      queue neighbor
+//      increment the neighbors distance by using the current nodes distance
+//          (as we get furthor away the distance will grow!)
+
 // https://leetcode.com/problems/01-matrix/solution/
 // https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/
 class BFSMatrix01Main{
