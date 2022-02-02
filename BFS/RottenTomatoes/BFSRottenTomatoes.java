@@ -3,6 +3,28 @@ package BFS.RottenTomatoes;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// pseduo
+//
+//  get counts for row and col
+//  create a counter for fresh oranges
+//  create a queue for BFS
+//  foreach row
+//      foreach col
+//          if rotten queue up
+//          if fresh increment counter
+//  create counter for mins, default to -1
+//  while the queue is not empty
+//      increment min counter
+//      do a level order DFS
+//      pop the rotten orange
+//      visit all the neighbors
+//      look for fresh organges
+//      when you find one decrement fresh counter
+//      mark it as now rotten
+//      queue up the neighbor for the next round
+//  if all the oranges have not rotted, return -1
+//  otherwise return the mins passed
+
 class BFSRottenTomatoesMains{
     public static void main(String[] args) {
         BFSRottenTomatoes b = new BFSRottenTomatoes();
