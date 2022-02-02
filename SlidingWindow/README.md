@@ -36,3 +36,16 @@ prev - i + j
 2. slide along the array
 3. remove the initial value and add the next value
 
+## Dynamic Size Sliding Window
+- Useful when you want to find the largest or smallest subarray that matches some condition
+
+e.g. 
+Find the smallest subarray that is <= some number
+
+x = 7
+[1,2,3,4,5,6]
+
+- find the smallest subarray that is >=7
+- allows you to start small and expand until you match the condition
+- once you find the condition you can start to subtract from the left side to get the minimal size
+- once you no longer match the condition you can start to exapnd again on the right side
