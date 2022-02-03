@@ -19,11 +19,11 @@ https://leetcode.com/problems/merge-two-sorted-lists/
 https://leetcode.com/problems/reverse-linked-list/
 
 Wed:
-https://leetcode.com/problems/01-matrix/
-https://leetcode.com/problems/rotting-oranges/
 https://leetcode.com/problems/combinations/
 https://leetcode.com/problems/permutations/
 https://leetcode.com/problems/letter-case-permutation/
+https://leetcode.com/problems/01-matrix/
+https://leetcode.com/problems/rotting-oranges/
 
 Thur:
 https://leetcode.com/problems/merge-two-sorted-lists/
