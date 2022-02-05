@@ -32,6 +32,13 @@ public class ReverseLinkedList {
 //      set prev to the curr node
 //  return prev
 
+//  need to keep track of the prev node
+//  iterate over the list
+//      set curr to the head
+//      increment head
+//      set the current nodes next to prev
+//      update prev to be the curr node
+
 // pseduo code 2 recursive
 //  (curr, prev)
 //      if curr is null return prev

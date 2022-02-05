@@ -25,11 +25,11 @@ https://leetcode.com/problems/letter-case-permutation/
 https://leetcode.com/problems/01-matrix/
 https://leetcode.com/problems/rotting-oranges/
 
-Thur:
-https://leetcode.com/problems/merge-two-sorted-lists/
-https://leetcode.com/problems/reverse-linked-list/
+Thur: done
 https://leetcode.com/problems/climbing-stairs/
 https://leetcode.com/problems/house-robber/
+https://leetcode.com/problems/merge-two-sorted-lists/
+https://leetcode.com/problems/reverse-linked-list/
 
 Fri: BREAK!
 
@@ -57,6 +57,33 @@ https://leetcode.com/problems/letter-case-permutation/
 Wed:
 https://leetcode.com/problems/climbing-stairs/
 https://leetcode.com/problems/house-robber/
+https://leetcode.com/problems/triangle/
 
 https://www.tryexponent.com/courses?ref=pramp&utm_source=pramp&utm_medium=referral&utm_campaign=pramp_nav_courses
 NEWYEAR22 - 10% of
+
+TODO
+https://leetcode.com/problems/pascals-triangle/
+https://leetcode.com/problems/minimum-falling-path-sum/
+
+
+
+feedback for overlap problems
+min(A[1], B[1]) - max(A[0], B[0])
+-this gives you a upper and lower limit of both
+you can use two pointers
+- keep incrementing the pointer which has the earliest start 
+
+// LCU cache
+// binary tree, all elem between [x,y]
+
+Time Planner
+Implement a function meetingPlanner that given the availability, slotsA and slotsB, of two people and a meeting duration dur, returns the earliest time slot that works for both of them and is of duration dur. If there is no common time slot that satisfies the duration requirement, return an empty array.
+
+Time is given in a Unix format called Epoch, which is a nonnegative integer holding the number of seconds that have elapsed since 00:00:00 UTC, Thursday, 1 January 1970.
+
+Each person’s availability is represented by an array of pairs. Each pair is an epoch array of size two. The first epoch in a pair represents the start time of a slot. The second epoch is the end time of that slot. The input variable dur is a positive integer that represents the duration of a meeting in seconds. The output is also a pair represented by an epoch array of size two.
+
+In your implementation assume that the time slots in a person’s availability are disjointed, i.e, time slots in a person’s availability don’t overlap. Further assume that the slots are sorted by slots’ start time.
+
+Implement an efficient solution and analyze its time and space complexities.
