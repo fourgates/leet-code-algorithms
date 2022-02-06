@@ -33,21 +33,23 @@ https://leetcode.com/problems/reverse-linked-list/
 
 Fri: BREAK!
 
-Sat:
+Sat: done
 https://leetcode.com/problems/combinations/
 https://leetcode.com/problems/permutations/
 https://leetcode.com/problems/letter-case-permutation/
 
 Sun:
+https://leetcode.com/problems/course-schedule/
+https://leetcode.com/problems/course-schedule-ii/
 https://leetcode.com/problems/01-matrix/
-https://leetcode.com/problems/rotting-oranges/
 https://leetcode.com/problems/climbing-stairs/
-https://leetcode.com/problems/house-robber/
 
 ## Week 2
 Mon:
 https://leetcode.com/problems/merge-two-sorted-lists/
 https://leetcode.com/problems/reverse-linked-list/
+https://leetcode.com/problems/rotting-oranges/
+https://leetcode.com/problems/house-robber/
 
 Tue:
 https://leetcode.com/problems/combinations/
@@ -59,13 +61,19 @@ https://leetcode.com/problems/climbing-stairs/
 https://leetcode.com/problems/house-robber/
 https://leetcode.com/problems/triangle/
 
+
+
+
+
+
+
 https://www.tryexponent.com/courses?ref=pramp&utm_source=pramp&utm_medium=referral&utm_campaign=pramp_nav_courses
 NEWYEAR22 - 10% of
 
 TODO
 https://leetcode.com/problems/pascals-triangle/
 https://leetcode.com/problems/minimum-falling-path-sum/
-
+https://leetcode.com/problems/alien-dictionary/
 
 
 feedback for overlap problems

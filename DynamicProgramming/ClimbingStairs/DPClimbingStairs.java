@@ -31,12 +31,19 @@ public class DPClimbingStairs {
 // O(n) with memo, you calculate each value once!
 class Solution {
     private int[] memo;
+    private int n;
     public int climbStairs(int n) {
         //return bottomDown(n);
         this.memo = new int[n + 1];
+        this.n = n;
         return topDown(n);
+        //return topDown(0);
     }
     private int topDown(int n){
+        // dp base cases
+        // there are two ways to get to the last step
+        // 1. you are on the n-1 step and you take one final step
+        // 2. you are on the n-2 step and you take 2 steps
         if(n == 1){
             return 1;
         }
@@ -49,6 +56,18 @@ class Solution {
         memo[n] = topDown(n-1) + topDown(n-2);
         return memo[n];
     }
+    private int topDown2(int curr){
+        if(curr == n){
+            return 1;
+        }
+        if(curr > n){
+            return 0;
+        }
+        if(memo[curr] > 0){
+            return memo[curr];
+        }
+        return memo[curr] = topDown2(curr + 1) + topDown2(curr +2);
+    }    
     private int bottomDown(int n){
         if(n == 1){
             return 1;
