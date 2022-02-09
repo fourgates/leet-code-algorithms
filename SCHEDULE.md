@@ -38,30 +38,43 @@ https://leetcode.com/problems/combinations/
 https://leetcode.com/problems/permutations/
 https://leetcode.com/problems/letter-case-permutation/
 
-Sun:
+Sun: done
 https://leetcode.com/problems/course-schedule/
 https://leetcode.com/problems/course-schedule-ii/
 https://leetcode.com/problems/01-matrix/
 https://leetcode.com/problems/climbing-stairs/
 
 ## Week 2
-Mon:
+
+TODO - need to switch up some topics
+maybe some of the shortest path stuff, greedy, disjoint sets, union find, binary search
+
+Mon: done
 https://leetcode.com/problems/merge-two-sorted-lists/
 https://leetcode.com/problems/reverse-linked-list/
 https://leetcode.com/problems/rotting-oranges/
 https://leetcode.com/problems/house-robber/
+https://leetcode.com/problems/meeting-rooms-ii/
 
 Tue:
 https://leetcode.com/problems/combinations/
 https://leetcode.com/problems/permutations/
 https://leetcode.com/problems/letter-case-permutation/
+https://leetcode.com/problems/course-schedule-ii/
 
 Wed:
 https://leetcode.com/problems/climbing-stairs/
 https://leetcode.com/problems/house-robber/
 https://leetcode.com/problems/triangle/
+https://leetcode.com/problems/meeting-rooms-ii/
 
+Thur:
 
+Fri:
+https://leetcode.com/problems/course-schedule-ii/
+
+Sat:
+https://leetcode.com/problems/meeting-rooms-ii/
 
 
 

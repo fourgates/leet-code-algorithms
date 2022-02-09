@@ -51,3 +51,9 @@ print(node)
 
 ## Space
 - `O(N * M)`
+
+
+## How to detect cycles in a graph?
+- Union-Find cycle detection works for undirected graphs
+- Topological Sort cycle detection works for directed graph
+- Bellman Ford Algorithm
