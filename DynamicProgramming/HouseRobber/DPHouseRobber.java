@@ -1,5 +1,6 @@
 package DynamicProgramming.HouseRobber;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 class DPHouseRobberMain{
@@ -92,5 +93,39 @@ class DPHouseRobber {
             memo.put(i, Math.max(dp(i-1), dp(i-2) + nums[i]));
         }
         return memo.get(i);
+    }
+}
+// solution uses arrays instead of a map
+class Solution {
+    private int[] memo;
+    private int[] nums;
+    public int rob(int[] nums) {
+        if(nums.length == 1){
+            return nums[0];
+        }
+        this.nums = nums;
+        this.memo = new int[nums.length];
+        Arrays.fill(memo, Integer.MIN_VALUE);
+        // add base cases to map
+        memo[0] = nums[0];
+        memo[1] = Math.max(this.nums[0], this.nums[1]);
+        
+        // we can do a top-down approach were we start at the value we are interested in
+        dp(nums.length - 1);
+        return this.memo[nums.length - 1];
+        
+    }
+    
+    private Integer dp(int curr){
+        if(curr == 0){
+            return this.nums[0];
+        }
+        else if(curr == 1){
+            return Math.max(this.nums[0], this.nums[1]);
+        }
+        if(memo[curr] == Integer.MIN_VALUE){
+            memo[curr] = Math.max(dp(curr-1), dp(curr-2) + nums[curr]);
+        }
+        return memo[curr];
     }
 }
