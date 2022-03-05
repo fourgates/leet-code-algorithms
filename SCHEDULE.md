@@ -3,6 +3,7 @@
 # Docs
 https://seanprashad.com/leetcode-patterns/
 https://www.youtube.com/watch?v=QT0dS9C9uwo&list=PLwRnjprOJ9HyxpQCzZRH1M0NTiPQqvwqF&index=8
+https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU
 
 ## Week 1
 Problem Types:
@@ -76,7 +77,6 @@ Sat: PRAM
 https://leetcode.com/problems/unique-paths/
 
 Sun:
-https://leetcode.com/problems/minimum-height-trees/solution/
 
 Mon: BREAK
 
@@ -84,24 +84,30 @@ Tue:
 https://leetcode.com/problems/integer-to-roman/
 https://leetcode.com/problems/meeting-rooms-ii/
 https://leetcode.com/problems/unique-paths/
-
 https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/cherry-pickup-ii/solution/
 
 Wed:
 https://leetcode.com/problems/minimum-height-trees/solution/
 
+
 Thur:
+https://leetcode.com/problems/cherry-pickup-ii/solution/
 https://leetcode.com/problems/unique-paths/
 https://leetcode.com/problems/integer-to-roman/
 
 Fri:
 https://leetcode.com/problems/course-schedule-ii/
+https://leetcode.com/problems/minimum-height-trees/solution/
 
 Sat:
+https://leetcode.com/problems/search-suggestions-system/
 https://leetcode.com/problems/integer-to-roman/
 
+Sun:
 
-
+Mon:
+https://leetcode.com/problems/minimum-height-trees/solution/
 END
 
 
