@@ -2,7 +2,7 @@ package Arrays.PrisonCells;
 
 import java.util.HashMap;
 
-public class ArratsPrisonCells {
+public class ArraysPrisonCells {
     
 }
 class Solution {
