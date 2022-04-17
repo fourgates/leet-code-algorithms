@@ -3,6 +3,10 @@
         establish base case
         establish recursive function
 
+// 1. DS to store or compute result
+// 2. Recursive relation to transition between states
+// 3. Base Case - which case does not require DP?        
+
 pseduo code 3 bottom-down
 
  create a base case(s) - sometimes there is more than one!
