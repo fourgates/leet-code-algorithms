@@ -62,7 +62,7 @@
 
 ## When to use each algorithm?
 
-### KrusKal
+### Kruskal
 - Use Kruskal in sparse graphs, more edges than vertices
 - Easier to implement
 - Use Disjoint Sets + Priority Queue

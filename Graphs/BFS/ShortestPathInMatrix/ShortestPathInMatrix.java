@@ -9,7 +9,7 @@ public class ShortestPathInMatrix {
     
 }
 class Solution {
-    private Queue<List<int[]>> queue = new ArrayDeque();
+    private Queue<List<int[]>> queue = new ArrayDeque<>();
     private int[][] grid;
     private boolean[][] visited;
     // TODO - change path from an int to a list to keep track of the current path
