@@ -128,12 +128,14 @@ print(node)
 - you cant do top sort if there are no zero degree nodes
 
 ### algo
-- start with zero degress nodes
-- add node to result
-- decrement the degree of each node conencted to it
-- queue up any new zero degree nodes
-    - if there are none, there is a cycle
-- return result
+```
+start with zero degress nodes
+add node to result
+decrement the degree of each node conencted to it
+queue up any new zero degree nodes
+    if there are none, there is a cycle
+return result
+```
 
 # Heap
 
@@ -150,3 +152,59 @@ print(node)
 start with the first sub array
 slide the window by removing the first element and adding the new next element
 ```
+
+## Min Spanning Tree
+- spanning tree - a tree than includes every vertex of graph G and is a subgraph of G (evey edge in the tree belongs to G)
+- min spanning tree - a spanning tree where the cost is minimized to span the entire tree. This implies the graph is weighted
+- use cases
+    - cluster analysis
+    - handwriting recognition
+    - image sementation
+- how to solve?
+    - kruskals algorithm
+        - use in a sparse graph, more edges than vertices
+        - easier to implement
+        - use dijoint sets + Priority Queue
+    - prims algorithm
+        - use on dense graphs, more edges than vertices
+        - harder to implement
+        - also uses a priority queue
+
+### Cut Property
+
+### What is a cut?
+- A cut is a partion of a graph into two **disjoint subsets** (remember union-find?)
+- A **crossing edge** is an edge that connects two nodes in the two disjoint sets
+
+### What is the "Cut Property"?
+- This provides support for both Kruskals and Prims algorithms
+- For any cut `C` of the graph, if the weight of an edge E is the cut-set of C is strictly smaller than the weights of all other edges in the cut-set of `C`, then this edge belongs to all MST's of the graph
+- Esstentially, if you break a graph down into "cuts" or disjoint sets and only keep the smallest edges, these edges should be apart of the MST.         
+
+## Kruskal's Algorithm
+1. sort all edges by weight
+2. create the MST by adding the smallest edges first. if the edge creates a cycle you cannot add it
+3. repeat until you get to n-1 edges
+
+## Time Complexity
+- `O(E log(E))`
+-- `O(E log(E))` to sort the edges
+-- `O(theta(V))` to to process the sorted edges, the worst case is `O(E theta(V))` bc you have to iterate over each edge + vert
+-- `O(E log(E) + E theta(V))` = `O(E log(E))`
+
+## Space Complexity
+- `O(V)`
+- Keeping track of the root of each V requires `V` space
+
+## Prim's Algorithm
+- Starts with two sets, `Visited` and `Non-Visited`
+1. Pick a vertex at random
+2. Remove vertex from `Non-Visited`
+3. Add vertex to `Visited`
+4. Find the minimum edge from the `Visited` disjoint set which connects to the `Non-Visited` disjoint set and add it to the MST. This is AKA the **crossing edge**. 
+5. Remove a vertex from `Non-Visited`
+6. Add that vertex to `Visited`
+7. Continue until `Non-Visited` is empty or `Visited` = n
+
+## Time Complexity
+- `O(E log(V))` for a Binary heap and `O(E + V log(V))` for a Fibonacci heap

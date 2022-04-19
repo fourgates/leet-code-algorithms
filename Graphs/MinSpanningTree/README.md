@@ -21,7 +21,7 @@
 
 ## Kruskal's Algorithm
 1. sort all edges by weight
-2. create the MST by added the smallest edges first. if the edge creates a cycle you cannot add it
+2. create the MST by adding the smallest edges first. if the edge creates a cycle you cannot add it
 3. repeat until you get to n-1 edges
 
 ## Time Complexity
@@ -34,7 +34,7 @@
 - `O(V)`
 - Keeping track of the root of each V requires `V` space
 
-## Prim's Algorith
+## Prim's Algorithm
 - Starts with two sets, `Visited` and `Non-Visited`
 1. Pick a vertex at random
 2. Remove vertex from `Non-Visited`
