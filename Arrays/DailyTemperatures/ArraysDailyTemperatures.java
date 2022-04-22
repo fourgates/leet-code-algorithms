@@ -37,6 +37,16 @@ public class ArraysDailyTemperatures {
     [30, 40, 50, 60]
     
     [1,   1,  1,  0]
+
+    impl
+        - init ds to return
+        - work backwards to determine the warmest day for each prev index
+        - we can use the answer we already have to skip ahead if the next days temp is less than the current temp
+        - return answer    
+
+    complexity
+        - time - O(n) - we only need to iterate the array onces
+        - space - O(n) - out answer array is the same size as the original
 **/
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
